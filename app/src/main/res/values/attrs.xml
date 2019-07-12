@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="iconViewAttr">
+        <attr name="app_icon" format="reference" />
+        <attr name="app_name" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="BounceBackViewPager">
+        <attr name="overscroll_translation" format="dimension" />
+        <attr name="overscroll_animation_duration" format="integer" />
+    </declare-styleable>
+
+</resources>

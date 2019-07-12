@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/launcher_pref_menu_general"
+        android:icon="@drawable/ic_settings_selector"
+        android:title="通用" />
+
+    <item
+        android:id="@+id/launcher_pref_menu_function"
+        android:icon="@drawable/ic_functions_selector"
+        android:title="功能" />
+
+    <item
+        android:id="@+id/launcher_pref_menu_about"
+        android:icon="@drawable/ic_about_selector"
+        android:title="关于" />
+</menu>

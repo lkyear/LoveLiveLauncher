@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="unlock_menu_two"
+        android:title="Lv.2 解锁功能">
+
+        <CheckBoxPreference
+            android:key="pref_alipay_shortcuts"
+            android:title="开启支付宝快捷菜单"
+            android:summary="长按后添加扫一扫和付款码选项"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="基本">
+
+        <CheckBoxPreference
+            android:key="pref_popup_box_show_visibility"
+            android:title="不显示立绘气泡"
+            android:summary="隐藏立绘前的气泡框" />
+
+        <CheckBoxPreference
+            android:key="pref_popup_box_long_press_modify"
+            android:title="长按修改文本"
+            android:summary="启用后主屏幕长按即可修改气泡文本" />
+
+        <EditTextPreference
+            android:key="pref_popbox_text"
+            android:title="气泡文本"
+            android:summary="配置立绘前气泡框中的文本" />
+
+        <CheckBoxPreference
+            android:key="pref_show_welcome_message"
+            android:title="显示欢迎语"
+            android:summary="返回主屏幕后立绘气泡会显示欢迎信息" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_bubble_adv_set"
+        android:title="高级">
+
+        <CheckBoxPreference
+            android:key="pref_popup_box_show_dynamic_text"
+            android:title="启用动态气泡"
+            android:summary="启用后点击气泡会显示配置的文本"/>
+
+        <CheckBoxPreference
+            android:key="pref_popup_box_dynamic_text_by_order"
+            android:title="顺序显示配置文本"
+            android:summary="启用后按照顺序依次显示，反之随机" />
+
+        <Preference
+            android:key="pref_popup_box_dynamic_text"
+            android:title="动态气泡文本配置"
+            android:summary="配置动态气泡文本" >
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.lkyear.lllauncher"
+                android:targetClass="com.lkyear.lllauncher.Preference.PreferenceBubbleText" />
+
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

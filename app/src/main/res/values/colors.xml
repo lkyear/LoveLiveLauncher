@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#575757</color>
+
+    <color name="Indigo">#575757</color>
+
+    <color name="colorPopupMenuBackground">#FAFAFAFA</color>
+
+    <color name="colorConsoleBackground">#542AF8</color>
+    <color name="colorConsoleFont">#A283FF</color>
+</resources>

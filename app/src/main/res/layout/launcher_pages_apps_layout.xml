@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEFFFFFF">
+
+    <LinearLayout
+        android:id="@+id/launcher_home_apps_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/launcher_home_apps_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:text="应用列表"
+            android:textSize="18dp"
+            android:textColor="#505050"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/launcher_home_apps_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_toLeftOf="@+id/launcher_home_apps_index_bar"/>
+
+            <com.lkyear.lllauncher.View.IndexBar
+                android:id="@+id/launcher_home_apps_index_bar"
+                android:layout_width="18dp"
+                android:layout_marginRight="6dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/launcher_home_apps_text_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/res_home_apps_textview_background"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:text="A"
+            android:textSize="30.0dp"
+            android:visibility="invisible"
+            android:elevation="3dp"/>
+
+        <ProgressBar
+            android:id="@+id/launcher_home_apps_progressbar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#60000000"></RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <TextView
+            android:id="@+id/launcher_home_apps_menu"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#505050"
+            android:textSize="15dp"
+            android:text="模式"/>
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/launcher_home_apps_back"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#505050"
+            android:textSize="15dp"
+            android:text="返回"/>
+
+    </LinearLayout>
+
+</LinearLayout>

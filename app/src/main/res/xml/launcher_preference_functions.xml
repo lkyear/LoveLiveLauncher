@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="pref_show_notification_bar"
+        android:title="不隐藏通知栏"
+        android:summary="显示通知栏"/>
+
+    <CheckBoxPreference
+        android:key="pref_low_visual"
+        android:title="减少动态效果"
+        android:summary="降低视觉效果以减少系统负担" />
+
+    <CheckBoxPreference
+        android:key="pref_five_column"
+        android:title="显示五列图标"
+        android:summary="更适合大屏手机的五列应用列表模式" />
+
+    <CheckBoxPreference
+        android:key="pref_small_icon"
+        android:title="减小图标大小"
+        android:summary="缩小图标尺寸减少大图标带来的不适感" />
+
+    <CheckBoxPreference
+        android:key="pref_auto_back"
+        android:title="自动返回主屏幕"
+        android:summary="打开应用或锁屏后自动返回主屏幕" />
+
+    <CheckBoxPreference
+        android:key="pref_key_back"
+        android:title="禁用返回键"
+        android:summary="按返回键时不返回主屏幕" />
+
+</PreferenceScreen>

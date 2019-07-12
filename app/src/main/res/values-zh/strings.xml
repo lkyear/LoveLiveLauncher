@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LoveLive桌面</string>
+    <string name="app_read_more"><u>详情...</u></string>
+    <string name="app_continue">继续</string>
+    <string name="app_start">开始</string>
+    <string name="app_ok">好</string>
+    <string name="app_donate"><u>赞助...</u></string>
+    <string name="app_eula"><u>阅读协议...</u></string>
+</resources>

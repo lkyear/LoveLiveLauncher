@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lkyear.lllauncher"
+    android:versionCode="322"
+    android:versionName="10.5.10" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="true">
+
+        <meta-data android:name="android.max_aspect" android:value="ratio_float"/>
+
+        <meta-data android:name="android.notch_support" android:value="true"/>
+
+        <activity
+            android:name=".Launcher.Launcher"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:persistent="true"
+            android:largeHeap="true"
+            android:stateNotNeeded="true"
+            android:resumeWhilePausing="true"
+            android:excludeFromRecents="true"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/WorkspaceTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.lkyear.lllauncher.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:persistent="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+        </activity>
+
+        <activity
+            android:name=".Launcher.LauncherUserInfo"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar" />
+
+        <activity
+            android:name=".Launcher.LauncherAppInfo"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Preference.PreferenceMain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Preference.PreferenceRole"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Preference.PreferenceRoleSwitch"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Preference.PreferenceRolePackAdder"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" >
+        </activity>
+
+        <activity
+            android:name=".Preference.PreferenceRolePackInstall"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/RolePackInstallTheme" >
+        </activity>
+
+        <activity
+            android:name=".Preference.PreferenceRolePackDelete"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Preference.PreferenceTest"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Preference.PreferenceShortcut"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Preference.PreferenceUserInfo"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Preference.PreferenceLevelUnlock"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Launcher.LauncherWebView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Preference.PreferenceUpdate"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Preference.PreferenceBubble"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Preference.PreferenceBrowser"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Preference.PreferenceBubbleText"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Preference.Console"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Launcher.SupportPay"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Launcher.ShelvesAppSelectActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Launcher.ShelvesManageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/CommonActivityTheme" />
+
+        <activity
+            android:name=".Torch.Splash"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <activity
+            android:name=".Torch.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".Torch.OnlyUseScreenLight"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"/>
+
+        <activity
+            android:name=".Setup.SetupEnd"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/SetupTheme" />
+
+        <activity
+            android:name=".Setup.SetupEula"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/SetupTheme" />
+
+        <activity
+            android:name=".Setup.SetupHello"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/SetupTheme" />
+
+        <activity
+            android:name=".Setup.SetupPack"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/SetupTheme" />
+
+        <activity
+            android:name=".Setup.SetupSupport"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/SetupTheme" />
+
+        <activity
+            android:name=".Setup.SetupUser"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/SetupTheme" />
+
+        <activity
+            android:name=".Setup.SetupClear"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/SetupTheme" />
+
+        <activity
+            android:name=".Setup.SetupVideo"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/SetupTheme" />
+
+        <service android:name=".Torch.NotificationService" />
+
+    </application>
+
+</manifest>

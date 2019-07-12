@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/res_setup_agreement"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="最终用户许可协议"
+        android:textColor="#000000"
+        android:textSize="25dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="最终用户许可协议包括两部分，分别是使用许可协议和隐私权政策，若要继续您必须同意这两份协议。\n\nA. 使用许可协议\nB. 隐私权政策\n\n点击下面的 “阅读协议” 以阅读这两份协议。"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:onClick="readEULA"
+            android:text="@string/app_eula" />
+
+        <CheckBox
+            android:id="@+id/launcher_setup_agree_eula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="我已阅读并同意最终用户许可协议"
+            android:textSize="14dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/res_button"
+        android:elevation="3dp"
+        android:onClick="nextClickEula"
+        android:text="@string/app_continue"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

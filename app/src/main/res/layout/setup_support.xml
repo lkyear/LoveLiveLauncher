@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/res_setup_wizard"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="想要请作者次点东西？"
+        android:textColor="#000000"
+        android:textSize="25dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="作为免费软件，作者一直承担着软件的运营费用，如果你喜欢LoveLive桌面，希望桌面可以长久更新，那么可以通过微信和支付宝支持作者。\n\n点击下面的 支持 进入支持作者页面。"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_donate"
+            android:textColor="@color/colorAccent"
+            android:textSize="16dp"
+            android:layout_marginTop="8dp"
+            android:onClick="supportWay"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center"
+        android:background="@drawable/res_button"
+        android:elevation="3dp"
+        android:text="@string/app_continue"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"
+        android:onClick="nextClickSupport"/>
+
+</LinearLayout>

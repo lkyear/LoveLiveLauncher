@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="立绘切换">
+
+        <Preference
+            android:key="pref_change_role"
+            android:title="更换立绘"
+            android:summary="使用内建或扩展包的立绘">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.lkyear.lllauncher"
+                android:targetClass="com.lkyear.lllauncher.Preference.PreferenceRoleSwitch" />
+
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="立绘选项">
+
+        <Preference
+            android:key="pref_add_pack"
+            android:title="安装立绘包"
+            android:summary="使用第三方立绘扩展包">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.lkyear.lllauncher"
+                android:targetClass="com.lkyear.lllauncher.Preference.PreferenceRolePackInstall" />
+
+        </Preference>
+
+        <Preference
+            android:key="pref_delete_pack"
+            android:title="管理立绘包"
+            android:summary="删除或查看立绘扩展包">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.lkyear.lllauncher"
+                android:targetClass="com.lkyear.lllauncher.Preference.PreferenceRolePackDelete" />
+                <!--android:targetClass="com.lkyear.lllauncher.Preference.PreferenceRolePackDelete" -->
+
+        </Preference>
+
+        <CheckBoxPreference
+            android:key="pref_not_show_role"
+            android:title="透明立绘"
+            android:summary="不显示立绘以配合Live2D动态壁纸" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

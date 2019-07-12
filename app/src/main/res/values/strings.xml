@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LoveLiveLauncher</string>
+    <string name="app_read_more"><u>Read more...</u></string>
+    <string name="app_continue">Continue</string>
+    <string name="app_start">Start</string>
+    <string name="app_ok">OK</string>
+    <string name="app_donate"><u>Donate...</u></string>
+    <string name="app_eula"><u>Read EULA...</u></string>
+</resources>

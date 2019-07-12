@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:costum="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.lkyear.lllauncher.View.IconView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="95dp"
+        costum:app_icon="@mipmap/ic_launcher"
+        costum:app_name="Application"
+        android:id="@+id/app_IconView" />
+
+    <CheckBox
+        android:id="@+id/app_CheckBox"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="" />
+
+</LinearLayout>

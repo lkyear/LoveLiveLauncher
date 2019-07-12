@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="一般">
+
+        <Preference
+            android:title="我的信息"
+            android:summary="编辑头像昵称在内的信息">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.lkyear.lllauncher"
+                android:targetClass="com.lkyear.lllauncher.Preference.PreferenceUserInfo" />
+
+        </Preference>
+
+        <Preference
+            android:title="高级功能"
+            android:summary="开启通过等级解锁的功能">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.lkyear.lllauncher"
+                android:targetClass="com.lkyear.lllauncher.Preference.PreferenceLevelUnlock" />
+
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="主屏幕">
+
+        <Preference
+            android:title="气泡配置"
+            android:summary="配置立绘前的气泡框" >
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.lkyear.lllauncher"
+                android:targetClass="com.lkyear.lllauncher.Preference.PreferenceBubble" />
+
+        </Preference>
+
+        <EditTextPreference
+            android:key="pref_target_text"
+            android:title="目标文本"
+            android:summary="配置主屏幕上目标框中的文本" />
+
+        <Preference
+            android:title="快捷按钮配置"
+            android:summary="配置主屏幕四个大按钮功能" >
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.lkyear.lllauncher"
+                android:targetClass="com.lkyear.lllauncher.Preference.PreferenceShortcut" />
+
+        </Preference>
+
+        <Preference
+            android:title="浏览器配置"
+            android:summary="配置主屏幕浏览器按钮的行为">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.lkyear.lllauncher"
+                android:targetClass="com.lkyear.lllauncher.Preference.PreferenceBrowser" />
+
+        </Preference>
+
+        <Preference
+            android:title="立绘配置"
+            android:summary="配置主屏幕的立绘样式">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.lkyear.lllauncher"
+                android:targetClass="com.lkyear.lllauncher.Preference.PreferenceRole" />
+
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="应用列表">
+
+        <Preference
+            android:key="pref_hide_app_restore"
+            android:title="还原隐藏的应用"
+            android:summary="还原所有已经被隐藏的应用" />
+
+    </PreferenceCategory>
+
+    <!--
+    <PreferenceCategory
+        android:title="手电筒">
+
+        <CheckBoxPreference
+            android:key="pref_torch_not_down_brightness"
+            android:title="保持屏幕亮度"
+            android:summary="开启闪光灯后不降低屏幕亮度" />
+
+        <CheckBoxPreference
+            android:key="pref_torch_default_open_light"
+            android:title="自动开启闪光灯"
+            android:summary="启动软件后自动开启闪光灯，仅用于包含闪光灯硬件的设备" />
+
+        <CheckBoxPreference
+            android:key="pref_torch_notification"
+            android:title="通知栏常驻"
+            android:summary="当闪光灯开启时显示一个常驻通知" />
+
+    </PreferenceCategory>
+    -->
+
+    <PreferenceCategory
+        android:title="实验性选项">
+
+        <CheckBoxPreference
+            android:key="pref_kill_by_root"
+            android:title="使用am force-stop"
+            android:summary="应用命令行工具停止应用运行" />
+
+        <CheckBoxPreference
+            android:key="pref_not_show_text_tip"
+            android:title="不显示文本修改"
+            android:summary="隐藏当目标和气泡文本为空时的设置提示" />
+
+        <CheckBoxPreference
+            android:key="pref_long_press_samsung_pay"
+            android:title="Sumsung Pay冲突解决方案"
+            android:summary="长按应用抽屉按钮打开Samsung Pay" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/res_setup_wizard"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="观看新版本的介绍视频！"
+        android:textColor="#000000"
+        android:textSize="25dp"/>
+
+    <WebView
+        android:id="@+id/launcher_setup_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"></WebView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:background="@drawable/res_button"
+        android:elevation="3dp"
+        android:text="好"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"
+        android:onClick="nextClickVideo"/>
+
+</LinearLayout>

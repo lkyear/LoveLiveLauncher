@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/pages_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/launcher_home_pages_head_size"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/launcher_home_pages_head_target_width"
+                android:layout_height="@dimen/launcher_home_pages_head_target_height"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/res_home_target"/>
+
+            <TextView
+                android:id="@+id/launcher_home_pages_tv_target"
+                android:layout_width="@dimen/launcher_home_pages_head_target_text_width"
+                android:layout_height="@dimen/launcher_home_pages_head_target_text_height"
+                android:layout_marginTop="14dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="start"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textColor="#000000"
+                android:textSize="@dimen/launcher_home_pages_head_target_text_size"
+                android:text="Loading..."/>
+
+        </RelativeLayout>
+
+        <com.lkyear.lllauncher.View.ShortcutView
+            android:id="@+id/launcher_home_pages_iv_head"
+            android:layout_width="@dimen/launcher_home_pages_head_size"
+            android:layout_height="@dimen/launcher_home_pages_head_size"
+            android:src="@drawable/res_about_icon"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/launcher_home_pages_iv_role"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pages_head"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/res_role_kotori"
+        android:scaleType="fitStart"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pages_head"
+        android:layout_marginBottom="@dimen/launcher_home_dock_icon_height"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <RelativeLayout
+                android:id="@+id/launcher_home_pages_rl_popbox"
+                android:layout_width="@dimen/launcher_home_pages_popbox_width"
+                android:layout_height="@dimen/launcher_home_pages_popbox_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/launcher_home_pages_popbox_margin_bottom"
+                android:layout_marginRight="3dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/res_home_popbox" />
+
+                <TextView
+                    android:id="@+id/launcher_home_pages_tv_popbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Loading..."
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/launcher_home_pages_head_target_text_size"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:gravity="start"
+                    android:layout_marginTop="@dimen/launcher_home_pages_popbox_text_margin_top"
+                    android:layout_marginLeft="@dimen/launcher_home_pages_popbox_text_margin_left"
+                    android:layout_marginRight="@dimen/launcher_home_pages_popbox_text_margin_right" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp">
+
+            <com.lkyear.lllauncher.View.ShortcutView
+                android:id="@+id/launcher_home_pages_iv_fist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/res_home_qq"/>
+
+            <com.lkyear.lllauncher.View.ShortcutView
+                android:id="@+id/launcher_home_pages_iv_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/res_home_bilibili"/>
+
+            <com.lkyear.lllauncher.View.ShortcutView
+                android:id="@+id/launcher_home_pages_iv_third"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/res_home_browser"/>
+
+            <com.lkyear.lllauncher.View.ShortcutView
+                android:id="@+id/launcher_home_pages_iv_fourth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/res_home_wechat"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

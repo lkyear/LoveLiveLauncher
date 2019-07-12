@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:summary="定期更新软件有助于减少问题"
+        android:title="检查更新">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.lkyear.lllauncher.Preference.PreferenceUpdate"
+            android:targetPackage="com.lkyear.lllauncher" />
+
+    </Preference>
+
+    <Preference
+        android:key="pref_about_thanks"
+        android:title="感谢及开源相关" />
+
+    <Preference
+        android:key="pref_about_group"
+        android:title="加入用户群" />
+
+    <Preference android:title="开发者控制台">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.lkyear.lllauncher.Preference.Console"
+            android:targetPackage="com.lkyear.lllauncher" />
+
+    </Preference>
+
+</PreferenceScreen>

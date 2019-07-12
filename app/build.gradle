@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+// apply plugin: 'kotlin-android'
+// apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.lkyear.lllauncher"
+        minSdkVersion 21
+        targetSdkVersion 28
+
+    }
+
+    signingConfigs {
+        release {
+            v2SigningEnabled false
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:support-v13:28.+'
+    implementation 'com.android.support:appcompat-v7:28.+'
+    implementation 'com.android.support:design:28.+'
+    implementation 'com.android.support:recyclerview-v7:28.+'
+    implementation 'com.github.amlcurran.showcaseview:library:5.4.3'
+    implementation 'com.nispok:snackbar:2.11.+'
+    implementation 'me.everything:overscroll-decor-android:1.0.4'
+}
+repositories {
+    mavenCentral()
+}

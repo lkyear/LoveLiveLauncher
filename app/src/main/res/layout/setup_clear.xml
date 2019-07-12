@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/res_setup_wizard"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="请注意！"
+        android:textColor="#000000"
+        android:textSize="25dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="为了带来更好的用户体验，桌面的数据将会重置，并且下列旧版本的功能在新版本里不可用：\n\n1. 手游快速启动\n2. 按键振动\n3. 屏幕切换效果\n4. 左撇子模式\n5. 应用锁\n6. 应用列表搜索"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/res_button"
+        android:elevation="3dp"
+        android:onClick="nextClickClear"
+        android:text="@string/app_ok"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

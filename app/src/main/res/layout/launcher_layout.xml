@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/launcher_home_root_layout">
+
+    <!-- WORKSPACE -->
+
+    <RelativeLayout
+        android:id="@+id/launcher_home_workspace_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- STATUS BAR -->
+
+        <RelativeLayout
+            android:id="@+id/root_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/launcher_home_status_hight"
+                android:scaleType="fitEnd"
+                android:src="@drawable/res_status_bar"/>
+
+            <TextView
+                android:id="@+id/launcher_home_status_tv_battery"
+                android:layout_width="@dimen/launcher_home_status_battery_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/launcher_home_status_battery_margin_top"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/launcher_home_status_battery_margin_right"
+                android:gravity="center"
+                android:text="90"
+                android:textSize="@dimen/launcher_home_status_battery_text_size"
+                android:textColor="#FF6599"/>
+
+            <ImageView
+                android:id="@+id/launcher_home_status_iv_wifi"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/launcher_home_status_icon_margin_top"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/launcher_home_status_icon_margin_right"
+                android:src="@drawable/res_status_bar_wifi"/>
+
+            <ImageView
+                android:id="@+id/launcher_home_status_iv_data"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/launcher_home_status_icon_margin_top"
+                android:layout_alignLeft="@+id/launcher_home_status_iv_wifi"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/res_status_bar_signal_inout"/>
+
+            <ImageView
+                android:id="@+id/launcher_home_status_iv_headset"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/launcher_home_status_icon_margin_top"
+                android:layout_alignLeft="@+id/launcher_home_status_iv_data"
+                android:layout_marginLeft="20dp"
+                android:visibility="invisible"
+                android:src="@drawable/res_status_bar_headset"/>
+
+            <ImageView
+                android:id="@+id/launcher_home_status_iv_profile"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/launcher_home_status_icon_margin_top"
+                android:layout_alignLeft="@+id/launcher_home_status_iv_headset"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/res_status_bar_ringer_silent"/>
+
+            <ImageView
+                android:id="@+id/launcher_home_status_iv_usb"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="@dimen/launcher_home_status_icon_margin_top"
+                android:layout_alignLeft="@+id/launcher_home_status_iv_profile"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/res_status_bar_usb"/>
+
+            <TextView
+                android:id="@+id/launcher_home_status_tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/launcher_home_status_date_margin_top"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/launcher_home_status_date_margin_right"
+                android:gravity="center"
+                android:text="2017年5月12日\n星期五"
+                android:textSize="@dimen/launcher_home_status_date_text_size"
+                android:textColor="#FF6599"/>
+
+            <com.lkyear.lllauncher.View.DigitalClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/launcher_home_status_time_date_margin_top"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/launcher_home_status_time_date_margin_right"
+                android:gravity="center|right"
+                android:textSize="@dimen/launcher_home_status_time_date_text_size"
+                android:textColor="#FF6599"/>
+
+        </RelativeLayout>
+
+        <!-- VIEW PAGER -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/root_head">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/launcher_home_pages_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never" >
+            </android.support.v4.view.ViewPager>
+
+        </RelativeLayout>
+
+        <!-- DOCK -->
+
+        <LinearLayout
+            android:id="@+id/launcher_home_dock_root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <com.lkyear.lllauncher.View.ShortcutView
+                android:id="@+id/launcher_home_dock_dial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/res_dock_dial"/>
+
+            <com.lkyear.lllauncher.View.ShortcutView
+                android:id="@+id/launcher_home_dock_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/res_dock_msg"/>
+
+            <com.lkyear.lllauncher.View.ShortcutView
+                android:id="@+id/launcher_home_dock_drawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/res_dock_drawer"/>
+
+            <com.lkyear.lllauncher.View.ShortcutView
+                android:id="@+id/launcher_home_dock_pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/res_dock_pref"/>
+
+            <com.lkyear.lllauncher.View.ShortcutView
+                android:id="@+id/launcher_home_dock_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/res_dock_camera"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <!-- BEAT MARK -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="#AE000000"
+        android:visibility="invisible"
+        android:text="BETA测试 禁止泄露截图等信息"
+        android:textColor="#FFFFFF"/>
+
+    <!-- APP DRAWER -->
+
+    <include
+        android:id="@+id/launcher_home_apps_drawer_layout"
+        android:visibility="gone"
+        layout="@layout/launcher_pages_apps_layout" />
+
+</RelativeLayout>
