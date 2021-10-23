@@ -183,7 +183,7 @@
 
     </RelativeLayout>
 
-    <!-- BEAT MARK -->
+    <!-- BETA MARK -->
 
     <TextView
         android:layout_width="wrap_content"
